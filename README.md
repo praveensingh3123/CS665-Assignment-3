@@ -18,7 +18,7 @@ The objective of the assignment is to create a Email generation system.
 * It enables automated emails generated for different types of users based on a template for each type of user.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/praveensingh3123/CS665-Assignment-3
 
 # Implementation Description 
 
