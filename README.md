@@ -1,13 +1,21 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | PRAVEEN SINGH              |
+| Date         | 03/02/2024                 |
+| Course       | CS 665                     |
+| Assignment # | 3                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+The objective of the assignment is to create a Email generation system.
+* It allows to create different customers such as:
+  * Business Customer
+  * Frequent Customer
+  * New Customer
+  * Returning Customer
+  * VIP Customer
+* Similarly, we can create other types of users without changing a lot of code as the program is very flexible.
+* It enables automated emails generated for different types of users based on a template for each type of user.
 
 # GitHub Repository Link:
 https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
@@ -15,16 +23,35 @@ https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
 # Implementation Description 
 
 
-For each assignment, please answer the following:
+* Flexibility of Implementation: The code emphasizes flexibility by using the Factory method pattern where we can easily create new type of customers and send emails to them without change much of the code. Any number of users can be added easily.
+* Simplicity and Understandability: The code is simple to understand as each type of customers are seperated into separate classes and whenever a new customer is created we just have to create a separate class for them.
+* Avoiding Duplicated Code: Use of Factory method pattern here ensures that there is no duplicate code in the program and interface is used for Customers and CustomerCreator so that we can reuse the code. 
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+**Customer Types Supported**
+* Business Customer
+* Returning Customer
+* Frequent Customer
+* New Customer
+* VIP Customer
 
+Each customer type has its distinct welcome email message tailored to its category.
+
+**Assumptions**
+* The customer categorization is based on the specific criteria defined within the system.
+* The email message for each category is predefined and can be modified within its respective class.
+
+**Design**
+
+The application adheres to the Object-Oriented Programming (OOP) principles and efficiently implements the Factory Method design pattern. The primary entities in the system are:
+* Customer (Interface): It is the main customer type.
+* CustomerCreator (Interface): Used for creating new customers.
+* Specific Customers (Concrete Classes): BusinessCustomer, FrequentCustomer, ReturningCustomer, NewCustomer, VIPCustomer.
+* Specific Customer Creators (Concrete Classes): BusinessCustomerCreator, ReturningCustomerCreator, etc.
+
+**JUnit Tests:**
+
+JUnit tests have been designed to validate:
+* The creation of different customer types and sending them emails.
 
 # Maven Commands
 
